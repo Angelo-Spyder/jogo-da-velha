@@ -14,16 +14,19 @@ let vez = true
 
     tabuleiro.addEventListener("click", function(event){
         if(event.target.tagName == "SPAN"){
-            if(vez){
-                event.target.textContent = "X"
-                validarJogada(event.target.textContent);
-                vez = false
-                
+
+            if(event.target.textContent != ""){
+                alert("conteúdo já selecionado")
             }else{
-                event.target.textContent = "0"
-                validarJogada(event.target.textContent);
-                vez = true
-                
+                if(vez){
+                    event.target.textContent = "X"
+                    validarJogada(event.target.textContent);
+                    vez = false  
+                }else{
+                    event.target.textContent = "0"
+                    validarJogada(event.target.textContent);
+                    vez = true
+                }
             }
         }
     })
