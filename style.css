@@ -1,0 +1,102 @@
+/*IMPORTANTO FONTE*/
+@import url('https://fonts.googleapis.com/css2?family=Kdam+Thmor+Pro&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Kdam Thmor Pro', sans-serif;
+}
+/*CABEÇALHO*/
+.cabecalho{
+    background: #252525;
+    color: aqua;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px;
+    text-transform: uppercase;
+}
+.titulo-principal{
+    border-bottom: 1px solid aqua;
+}
+.creditos{
+    font-size: 24px;
+    padding: 2px;
+    background: rgba(127, 255, 212, 0.205);
+}
+/*CONTEUDO PRINCIPAL*/
+.conteudo{
+    width: 100%;
+    color: #191919;
+}
+.vitorias{
+    width: 500px;
+    margin: 20px auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.titulo-vitorias{
+    padding: 10px;
+    font-size: 30px;
+}
+.jogadores{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+}
+.jogador{
+    font-weight: bold;
+}
+.jogador span{
+    color: red;
+}
+/*TABULEIRO*/
+.tabuleiro{
+    width: 370px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.posicao{
+    width: 100px;
+    height: 100px;
+    border: 2px solid #252525;
+    margin: 2px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 80px;
+}
+/*STATUS*/
+.status{
+    margin: 10px;
+    padding: 10px;
+    display: flex;
+    justify-items: center;
+    align-items: center;
+    flex-direction: column;
+}
+.status-partida{
+    padding: 10px;
+    font-size: 28px;
+}
+.reiniciar{
+    border: 1px solid white;
+    background: #252525;
+    color: aqua;
+    width: 200px;
+    padding: 10px;
+    font-size: 25px;
+    border-radius: 10px;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: 0.2s;
+}
+.reiniciar:hover{
+    transform: scale(1.2);
+}
