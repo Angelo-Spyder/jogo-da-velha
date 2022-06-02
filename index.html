@@ -5,34 +5,35 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Jogo Da Velha</title>
+        <link rel="stylesheet" href="style.css">
     </head>
     <body>
-        <header>
-            <h1>jogo da velha</h1>
-            <p>feito por Ângelo</p>
+        <header class="cabecalho">
+            <h1 class="titulo-principal">jogo da velha</h1>
+            <p class="creditos">feito por Ângelo</p>
         </header>
-        <section>
-            <main>
-                <h2>vitórias</h2>
-                <div>
-                    <p>jogador X: <span>0</span></p>
-                    <p>jogador 0: <span>0</span></p>
+        <section class="conteudo">
+            <main class="vitorias">
+                <h2 class="titulo-vitorias">vitórias</h2>
+                <div class="jogadores">
+                    <p class="jogador">jogador X: <span id="pontosX">0</span></p>
+                    <p class="jogador">jogador 0: <span id="pontos0">0</span></p>
                 </div>
             </main>
-            <main>
-                <span>1</span>
-                <span>2</span>
-                <span>3</span>
-                <span>4</span>
-                <span>5</span>
-                <span>6</span>
-                <span>7</span>
-                <span>8</span>
-                <span>9</span>
+            <main class="tabuleiro">
+                <span class="posicao">1</span>
+                <span class="posicao">2</span>
+                <span class="posicao">3</span>
+                <span class="posicao">4</span>
+                <span class="posicao">5</span>
+                <span class="posicao">6</span>
+                <span class="posicao">7</span>
+                <span class="posicao">8</span>
+                <span class="posicao">9</span>
             </main>
-            <main>
-                <h2>Começar</h2>
-                <button>Reiniciar</button>
+            <main class="status">
+                <h2 class="status-partida">Começar</h2>
+                <button id="reiniciar">Reiniciar</button>
             </main>
         </section>
     </body>
