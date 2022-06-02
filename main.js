@@ -9,6 +9,7 @@ let posicao = document.querySelectorAll(".posicao");
 let status = document.querySelector(".status-partida");
 let reiniciar = document.querySelector("#btn-reiniciar");
 
+let audiosRatinho = document.querySelectorAll(".ratinho")
 /*COLOCANDO ELEMENTOS NA TELA*/
 let vez = true
 let quantidadeJogada = 0
@@ -34,9 +35,11 @@ let quantidadeJogada = 0
         }
         if(quantidadeJogada  == 9 && !validarJogada()){
             status.textContent = "EMPATE!"
+            tocarAudio()
             setTimeout( () => {
                 resetarJogo()
-            },1000)
+                
+            },2000)
         }
     })
     
@@ -56,16 +59,18 @@ function validarJogada(jogada){
         status.textContent = "vitória do jogador " + jogada
         if(jogada == "0"){
             pontos0.textContent = Number(pontos0.textContent) + 1
+            tocarAudio()
             setTimeout( () => {
                 resetarJogo()
-            },1000)
+            },2000)
             
         }
         if(jogada == "X"){
             pontosX.textContent = Number(pontosX.textContent) + 1
+            tocarAudio()
             setTimeout( () => {
                 resetarJogo()
-            },1000)
+            },2000)
         }
     }
 }
@@ -126,3 +131,9 @@ reiniciar.addEventListener("click", function reiniciarJogo(){
         pontosX.textContent = "0"
     }
 })
+/*AUDIO*/
+function tocarAudio(){
+    let random = Math.floor(Math.random() * 3)
+    console.log(random)
+    audiosRatinho[random].play()
+}
