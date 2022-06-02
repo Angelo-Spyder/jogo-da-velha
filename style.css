@@ -12,6 +12,7 @@
     background: #252525;
     color: aqua;
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
     padding: 5px;
@@ -99,4 +100,66 @@
 }
 .reiniciar:hover{
     transform: scale(1.2);
+}
+
+/*MOBILE*/
+@media screen and (max-width: 678px){
+    /*CABECAÇALHO*/
+    .cabecalho{
+        flex-direction: column;
+        text-align: center;
+        justify-content: space-between;
+        height: 150px;
+    }
+    .titulo-principal{
+        width: 100%;
+    }
+    /*CONTEUDO VITORIAS*/
+    .conteudo{
+        width: 100%;
+        color: #191919;
+    }
+    .vitorias{
+        width: 100%;
+    }
+    .jogador{
+        margin: 20px;
+    }
+    /*STATUS*/
+    .status{
+    margin: 10px;
+    padding: 10px;
+    display: flex;
+    justify-items: center;
+    align-items: center;
+    flex-direction: column;
+}
+.status-partida{
+    padding: 10px;
+    font-size: 28px;
+}
+.reiniciar{
+    border: 1px solid white;
+    background: #252525;
+    color: aqua;
+    width: 120px;
+    padding: 10px;
+    font-size: 18px;
+    border-radius: 10px;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: 0.2s;
+}
+.reiniciar:hover{
+    animation: anim 2s ;
+}
+@keyframes anim{
+    0%{
+        filter: hue-rotate(0deg);
+    }
+    100%{
+        filter: hue-rotate(360deg);
+        transform: scale(1.2);
+    }
+}
 }
