@@ -14,13 +14,15 @@ let vez = true
 
 posicao.forEach( ()=>{
     tabuleiro.addEventListener("click", function(event){
-        console.log(event.target)
-        if(vez){
-            event.target.textContent = "X"
-            vez = false
-        }else{
-            event.target.textContent = "0"
-            vez = true
+        if(event.target.tagName == "SPAN"){
+            if(vez){
+                event.target.textContent = "X"
+                vez = false
+            }else{
+                event.target.textContent = "0"
+                vez = true
+            }
         }
+
     })
 })
