@@ -11,6 +11,7 @@ let reiniciar = document.querySelector("#btn-reiniciar");
 
 /*COLOCANDO ELEMENTOS NA TELA*/
 let vez = true
+let quantidadeJogada = 0
 
     tabuleiro.addEventListener("click", function(event){
         if(event.target.tagName == "SPAN"){
@@ -22,12 +23,20 @@ let vez = true
                     event.target.textContent = "X"
                     validarJogada(event.target.textContent);
                     vez = false  
+                    quantidadeJogada = quantidadeJogada + 1
                 }else{
                     event.target.textContent = "0"
                     validarJogada(event.target.textContent);
                     vez = true
+                    quantidadeJogada = quantidadeJogada + 1
                 }
             }
+        }
+        if(quantidadeJogada  == 9 && !validarJogada()){
+            status.textContent = "EMPATE!"
+            setTimeout( () => {
+                resetarJogo()
+            },1000)
         }
     })
     
@@ -58,8 +67,6 @@ function validarJogada(jogada){
                 resetarJogo()
             },1000)
         }
-    }else{
-
     }
 }
 
@@ -104,6 +111,7 @@ function resetarJogo(){
     for(var i = 0; i < 9; i++){
         posicao[i].textContent = ""
         vez = true
+        quantidadeJogada = 0
         status.textContent = "começar"
     }
 }
@@ -112,6 +120,7 @@ reiniciar.addEventListener("click", function reiniciarJogo(){
     for(var i = 0; i < 9; i++){
         posicao[i].textContent = ""
         vez = true
+        quantidadeJogada = 0
         status.textContent = "começar"
         pontos0.textContent = "0"
         pontosX.textContent = "0"
